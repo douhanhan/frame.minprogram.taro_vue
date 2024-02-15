@@ -1,0 +1,258 @@
+.personal-center-container {
+  width: inherit;
+  height: inherit;
+
+  .header {
+    margin: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
+    .images {
+      width: 140px;
+      height: 140px;
+      flex-basis: 140px;
+      margin-right: 24px;
+      position: relative;
+
+      .avatar {
+        width: 140px;
+        height: 140px;
+        flex-basis: 140px;
+        border-radius: 80px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:active {
+          opacity: 0.8;
+        }
+      }
+
+      .nimeng {
+        position: absolute;
+        top: 68px;
+        left: 100px;
+        font-size: 32px;
+        animation: nimengAnimation 2s infinite;
+      }
+
+      .maozhua {
+        position: absolute;
+        top: -32px;
+        left: 80px;
+        transform: rotate(40deg);
+        font-size: 32px;
+        opacity: 0.4;
+      }
+
+      .qishui {
+        position: absolute;
+        top: 68px;
+        left: -38px;
+        font-size: 54px;
+        animation: qishuiAnimation 2s infinite;
+        z-index: 99;
+      }
+    }
+
+    .info {
+      flex-grow: 1;
+      width: calc(100% - 140px);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: flex-start;
+      padding-left: 24px;
+      box-sizing: border-box;
+
+      .info-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: flex-end;
+        width: 100%;
+      }
+
+      .info-name {
+        font-size: 36px;
+        font-weight: 500;
+      }
+
+      .info-edit {
+        font-size: 28px;
+        font-weight: 500;
+
+        &:active {
+          opacity: 0.8;
+        }
+      }
+
+      .info-bottom {
+        font-size: 28px;
+        color: #939399;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        margin-top: 16px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .center {
+    margin: 32px;
+    .statistics {
+      position: absolute;
+      width: inherit;
+      height: inherit;
+
+      .title {
+        font-size: 32px;
+        font-weight: 500;
+        padding: 16px 32px 0 52px;
+      }
+
+      .results {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+
+        .result {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .number {
+          text-align: center;
+          font-size: 42px;
+          font-weight: 500;
+          height: 48px;
+        }
+
+        .text {
+          text-align: center;
+          font-size: 28px;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin: 0 32px;
+
+    .list {
+      position: relative;
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+      z-index: 999;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      border: solid 2px transparent;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+
+      .line {
+        width: inherit;
+        height: 2px;
+        margin: 0 4px;
+      }
+
+      .item {
+        width: calc(100% - 48px);
+        min-height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        padding: 0 24px;
+
+        .left {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-content: center;
+          align-items: center;
+        }
+
+        .right {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-content: center;
+          align-items: center;
+
+          .iconfont {
+            color: #939399;
+          }
+        }
+
+        &:active {
+          opacity: 0.8;
+        }
+
+        .iconfont {
+          scale: 0.6;
+        }
+
+        .text {
+          font-size: 32px;
+          color: #939399;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes qishuiAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes nimengAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

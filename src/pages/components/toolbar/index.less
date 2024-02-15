@@ -1,0 +1,115 @@
+@import '@assets/styles/variable.less';
+
+.toolbar-container {
+  position: fixed;
+  z-index: 9900;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 142px;
+  width: 100%;
+  margin-bottom: env(safe-area-inset-bottom);
+
+  .toolbar {
+    width: 100%;
+    height: 112px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .rows {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: inherit;
+    width: inherit;
+    border-radius: 24px;
+    box-shadow: 0 -8px 4px rgb(166 166 166 / 10%);
+    background-color: #fff;
+
+    .row {
+      flex: 1;
+      display: flex;
+      flex-flow: column nowrap;
+      align-content: center;
+      justify-content: flex-end;
+      align-items: center;
+      height: inherit;
+
+      .iconfont {
+        z-index: 100;
+        position: relative;
+        scale: 0.7;
+        &::before {
+          display: inline;
+          vertical-align: bottom;
+        }
+      }
+
+      .text {
+        display: inline-flex;
+        font-size: 24px;
+        font-weight: normal;
+        width: inherit;
+        position: relative;
+        top: -4px;
+        z-index: 100;
+      }
+    }
+
+    .active {
+      position: relative;
+
+      .iconfont {
+        font-size: 66px !important;
+        scale: 1;
+        position: relative;
+        top: -12px;
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .circle {
+    width: 88px;
+    height: 88px;
+    border-radius: 44px;
+    position: absolute;
+    top: -16px;
+    background-color: #fff;
+    animation: circleAnimation 3s 1;
+  }
+}
+
+@keyframes circleAnimation {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+@keyframes active {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}

@@ -1,0 +1,178 @@
+.edit-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    z-index: 99;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: inherit;
+    }
+
+    .header {
+      box-sizing: border-box;
+      height: 160px;
+      margin-top: 32px;
+      margin-bottom: 32px;
+
+      .cell {
+        width: 50%;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        .iconfont {
+          font-size: 124px !important;
+          opacity: 0.6;
+        }
+
+        .text {
+          font-size: 32px;
+          font-weight: 500;
+          opacity: 0.6;
+          margin-top: -30px;
+          padding-top: 24px;
+        }
+      }
+
+      .active {
+        .iconfont {
+          opacity: 1 !important;
+        }
+
+        .text {
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    .content {
+      overflow: auto;
+
+      .card {
+        position: relative;
+        width: 100%;
+        height: inherit;
+        border-radius: 24px;
+        z-index: 999;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        border: solid 4px transparent;
+        box-sizing: border-box;
+        flex-flow: column nowrap;
+        margin: 0 32px;
+        display: flex;
+        overflow: scroll;
+
+        .form-item {
+          width: calc(inherit - 56px);
+          min-height: 88px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          align-content: center;
+          padding: 0 56px;
+
+          .item-left {
+            font-size: 32px;
+            font-weight: 500;
+            width: 50%;
+          }
+
+          .item-right {
+            font-size: 28px;
+            width: 50%;
+            text-align: right;
+
+            .placeholder {
+              font-weight: normal;
+              font-size: 28px;
+            }
+
+            .editor {
+              min-height: 400px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer {
+      height: 128px;
+      width: inherit;
+      bottom: 0;
+      z-index: 9999;
+      margin-bottom: 32px;
+
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        align-content: flex-end;
+        width: inherit;
+        height: 128px;
+      }
+
+      .subbutton {
+        width: 240px;
+        height: 84px;
+        border-radius: 48px;
+        text-align: center;
+        border: 0 solid;
+        z-index: 999;
+        font-size: 32px;
+        font-weight: 450;
+        line-height: 84px;
+
+        &:active {
+          opacity: 0.9;
+        }
+      }
+
+      .button {
+        width: 240px;
+        height: 84px;
+        border-radius: 48px;
+        text-align: center;
+        border: 0 solid;
+        z-index: 999;
+        font-size: 32px;
+        font-weight: 450;
+        line-height: 84px;
+
+        &:active {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  .background {
+    width: calc(100% - 64px);
+    height: 776px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    position: absolute;
+  }
+}

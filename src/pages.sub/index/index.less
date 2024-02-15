@@ -1,0 +1,191 @@
+@import '@assets/styles/variable.less';
+
+.index-container {
+  width: inherit;
+  height: inherit;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: inherit;
+    height: inherit;
+
+    .top {
+      height: 440px;
+      width: inherit;
+      display: flex;
+      flex-flow: column nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+
+      .bubble {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%;
+        width: 100%;
+        animation: topAnimation 2s 1;
+        animation-fill-mode: forwards;
+      }
+
+      .round {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        width: 340px;
+        height: 340px;
+        position: absolute;
+      }
+
+      .avatar {
+        display: flex;
+        flex-flow: row nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 340px;
+        height: 340px;
+        border: solid 4px transparent;
+        border-radius: 220px;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        // clip-path: inset(0 round 10px);
+        animation: transAnimation 3s infinite;
+        margin-top: 12px;
+        margin-left: -6px;
+      }
+
+      .images {
+        width: 320px;
+        height: 320px;
+        border-radius: 160px;
+        z-index: 999;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        margin-top: 32px;
+      }
+    }
+
+    .middle {
+      display: flex;
+      flex-flow: column nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      margin: 32px;
+
+      .card {
+        position: relative;
+        width: 100%;
+        height: inherit;
+        border-radius: 24px;
+        z-index: 999;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        border: solid 2px transparent;
+        box-sizing: border-box;
+        flex-flow: column nowrap;
+        margin: 0 32px 32px;
+        display: flex;
+        overflow: scroll;
+
+        &:active {
+          opacity: 0.8;
+        }
+
+        .form-item {
+          width: calc(inherit - 32px);
+          min-height: 88px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          align-content: center;
+          padding: 0 32px;
+
+          .item-top {
+            font-size: 32px;
+            font-weight: 500;
+            width: 100%;
+            display: block;
+            margin-top: 32px;
+          }
+
+          .item-bottom {
+            font-size: 28px;
+            width: 100%;
+            display: block;
+            margin-top: 16px;
+            padding-bottom: 32px;
+            line-height: 42px;
+
+            .placeholder {
+              font-weight: normal;
+              font-size: 28px;
+              line-height: 42px;
+            }
+
+            .textarea {
+              height: 200px;
+              font-size: 28px;
+              line-height: 42px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .bottom {
+      height: 96px;
+      width: inherit;
+      display: flex;
+      flex-flow: column nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @keyframes transAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes topAnimation {
+    0% {
+      opacity: 0.2;
+      height: 0;
+      width: 0;
+    }
+
+    50% {
+      opacity: 0.6;
+      height: 160px;
+      width: 25%;
+    }
+
+    80% {
+      opacity: 0.8;
+      height: 320px;
+      width: 50%;
+    }
+
+    100% {
+      opacity: 1;
+      height: 640px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,420 @@
+@import './index.less';
+@import '@assets/styles/variable.less';
+
+.theme-container {
+  width: inherit;
+  height: inherit;
+
+  .column {
+    margin: 32px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    .row {
+      height: 400px;
+      width: calc(100% / 2 - 32px);
+      border-radius: 24px;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      border: solid 2px transparent;
+      box-sizing: border-box;
+      margin: 16px 16px 32px;
+    }
+
+    .orange {
+      background-image: linear-gradient(#fff, #fff),
+        linear-gradient(
+          128deg,
+          @orange-round-linear-main-4 0%,
+          @orange-round-linear-main-1 20%,
+          @orange-round-linear-main-2 88.8%,
+          @orange-round-linear-main-3 110%
+        );
+
+      .line {
+        background: linear-gradient(
+          112.13deg,
+          @orange-round-linear-main-4 0%,
+          @orange-round-linear-main-1 30%,
+          @orange-round-linear-main-3 80%,
+          @orange-round-linear-main-2 100%
+        );
+        width: 100%;
+        height: 2px;
+      }
+
+      .iconfont {
+        color: #f68f1c;
+      }
+
+      .text {
+        color: #7b5023;
+      }
+
+      .qishui {
+        color: #f68f1c;
+      }
+
+      .bubble18 {
+        background-image: url('@assets/images/bubble/bubble-orange-18.png');
+      }
+
+      .bubble20 {
+        background-image: url('@assets/images/bubble/bubble-orange-20.png');
+      }
+
+      .bubble22 {
+        background-image: url('@assets/images/bubble/bubble-orange-22.png');
+      }
+
+      .bubble24 {
+        background-image: url('@assets/images/bubble/bubble-orange-24.png');
+      }
+
+      .bubble28 {
+        background-image: url('@assets/images/bubble/bubble-orange-28.png');
+      }
+
+      .bubble30 {
+        background-image: url('@assets/images/bubble/bubble-orange-30.png');
+      }
+    }
+
+    .blue {
+      background-image: linear-gradient(#fff, #fff),
+        linear-gradient(
+          128deg,
+          @blue-round-linear-main-4 0%,
+          @blue-round-linear-main-1 20%,
+          @blue-round-linear-main-2 88.8%,
+          @blue-round-linear-main-3 110%
+        );
+
+      .line {
+        background: linear-gradient(
+          112.13deg,
+          @blue-round-linear-main-4 0%,
+          @blue-round-linear-main-1 30%,
+          @blue-round-linear-main-3 80%,
+          @blue-round-linear-main-2 100%
+        );
+        width: 100%;
+        height: 2px;
+      }
+
+      .iconfont {
+        color: #5c9489;
+      }
+
+      .text {
+        color: #465169;
+      }
+
+      .haitan {
+        color: #789262;
+      }
+
+      .bubble18 {
+        background-image: url('@assets/images/bubble/bubble-blue-18.png');
+      }
+
+      .bubble20 {
+        background-image: url('@assets/images/bubble/bubble-blue-20.png');
+      }
+
+      .bubble22 {
+        background-image: url('@assets/images/bubble/bubble-blue-22.png');
+      }
+
+      .bubble24 {
+        background-image: url('@assets/images/bubble/bubble-blue-24.png');
+      }
+
+      .bubble28 {
+        background-image: url('@assets/images/bubble/bubble-blue-28.png');
+      }
+
+      .bubble30 {
+        background-image: url('@assets/images/bubble/bubble-blue-30.png');
+      }
+    }
+
+    .red {
+      background-image: linear-gradient(#fff, #fff),
+        linear-gradient(
+          128deg,
+          @red-round-linear-main-4 0%,
+          @red-round-linear-main-1 20%,
+          @red-round-linear-main-2 88.8%,
+          @red-round-linear-main-3 110%
+        );
+
+      .line {
+        background: linear-gradient(
+          112.13deg,
+          @red-round-linear-main-4 0%,
+          @red-round-linear-main-1 30%,
+          @red-round-linear-main-3 80%,
+          @red-round-linear-main-2 100%
+        );
+        width: 100%;
+        height: 2px;
+      }
+
+      .iconfont {
+        color: #df5d8d;
+      }
+
+      .text {
+        color: #692841;
+      }
+
+      .huaduo {
+        color: #eb3c70;
+      }
+
+      .bubble18 {
+        background-image: url('@assets/images/bubble/bubble-red-18.png');
+      }
+
+      .bubble20 {
+        background-image: url('@assets/images/bubble/bubble-red-20.png');
+      }
+
+      .bubble22 {
+        background-image: url('@assets/images/bubble/bubble-red-22.png');
+      }
+
+      .bubble24 {
+        background-image: url('@assets/images/bubble/bubble-red-24.png');
+      }
+
+      .bubble28 {
+        background-image: url('@assets/images/bubble/bubble-red-28.png');
+      }
+
+      .bubble30 {
+        background-image: url('@assets/images/bubble/bubble-red-30.png');
+      }
+    }
+
+    .top {
+      width: 100%;
+      height: 310px;
+      box-sizing: border-box;
+      position: relative;
+
+      .qishui {
+        position: absolute;
+        top: 180px;
+        left: 120px;
+        font-size: 128px;
+        scale: 6;
+        z-index: 99;
+        opacity: 0.1;
+        transform: rotate(20deg);
+      }
+
+      .haitan {
+        position: absolute;
+        top: 180px;
+        left: 120px;
+        font-size: 128px;
+        scale: 4.5;
+        z-index: 99;
+        opacity: 0.1;
+      }
+
+      .huaduo {
+        position: absolute;
+        top: 180px;
+        left: 120px;
+        font-size: 128px;
+        scale: 4.5;
+        z-index: 99;
+        opacity: 0.1;
+      }
+    }
+
+    .bottom {
+      width: 100%;
+      height: 90px;
+      box-sizing: border-box;
+      padding: 24px 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+
+      .iconfont {
+        font-size: 54px !important;
+      }
+
+      .text {
+        font-size: 32px !important;
+        font-weight: 500;
+        padding-left: 24px;
+      }
+    }
+  }
+}
+
+@keyframes qishuiAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes nimengAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bubble18Animation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-2px, -90px) rotate(45deg);
+  }
+
+  50% {
+    transform: translate(0, -180px) rotate(90deg);
+  }
+
+  75% {
+    transform: translate(2px, -270px) rotate(135deg);
+  }
+
+  100% {
+    transform: translate(0, -360px) rotate(180deg);
+  }
+}
+
+@keyframes bubble20Animation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(8px, -40px) rotate(45deg);
+  }
+
+  50% {
+    transform: translate(0, -80px) rotate(90deg);
+  }
+
+  75% {
+    transform: translate(-8px, -120px) rotate(135deg);
+  }
+
+  100% {
+    transform: translate(0, -160px) rotate(180deg);
+  }
+}
+
+@keyframes bubble22Animation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(6px, -60px) rotate(45deg);
+  }
+
+  50% {
+    transform: translate(0, -120px) rotate(90deg);
+  }
+
+  75% {
+    transform: translate(-6px, -180px) rotate(135deg);
+  }
+
+  100% {
+    transform: translate(0, -270px) rotate(180deg);
+  }
+}
+
+@keyframes bubble24Animation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(8px, -70px) rotate(45deg);
+  }
+
+  50% {
+    transform: translate(0, -140px) rotate(90deg);
+  }
+
+  75% {
+    transform: translate(-8px, -210px) rotate(135deg);
+  }
+
+  100% {
+    transform: translate(0, -280px) rotate(180deg);
+  }
+}
+
+@keyframes bubble28Animation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-10px, -100px) rotate(45deg);
+  }
+
+  50% {
+    transform: translate(0, -200px) rotate(90deg);
+  }
+
+  75% {
+    transform: translate(10px, -300px) rotate(135deg);
+  }
+
+  100% {
+    transform: translate(0, -400px) rotate(180deg);
+  }
+}
+
+@keyframes bubble30Animation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(12px, -90px) rotate(45deg);
+  }
+
+  50% {
+    transform: translate(0, -180px) rotate(90deg);
+  }
+
+  75% {
+    transform: translate(-12px, -270px) rotate(135deg);
+  }
+
+  100% {
+    transform: translate(0, -360px) rotate(180deg);
+  }
+}

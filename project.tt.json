@@ -1,0 +1,13 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "frame.minprogram.taro_vue",
+  "description": "豆氏家族成员生活管理",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}
